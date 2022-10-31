@@ -22,12 +22,15 @@ public class Calc extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		//패널지정 
-		JPanel P_all = new JPanel();  //베이스 
-		JPanel P_con = new JPanel();  //콘텐
-		JPanel P_cal = new JPanel();
+		
+		JPanel P_all = new JPanel();	//베이스 
+		JPanel P_old = new JPanel();	//기존 수식
+		JPanel P_con = new JPanel();  	//콘텐
+		JPanel P_cal = new JPanel();	//
 		
 		Font bold = new Font("맑은 고딕", Font.BOLD, 40);
 		Font bt_bold = new Font("맑은 고딕", Font.BOLD, 30);
+		Font num_bold = new Font("맑은 고딕", Font.BOLD, 35);
 		
 		//색깔 생성
 		Color gray = new Color(204,204,204);

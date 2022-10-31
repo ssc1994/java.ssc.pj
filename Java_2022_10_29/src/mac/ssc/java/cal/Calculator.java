@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.Event;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -42,7 +43,9 @@ public class Calculator extends JFrame {
 		
 		//폰트 생성
 		Font bold = new Font("맑은 고딕", Font.BOLD, 40);
-		Font bt_bold = new Font("맑은 고딕", Font.BOLD, 30);
+		Font bt_bold = new Font("맑은 고딕", Font.BOLD, 25);
+		Font num_bold = new Font("맑은 고딕", Font.BOLD, 30);
+		
 		
 		//색깔 생성
 		Color gray = new Color(204,204,204);
@@ -56,8 +59,8 @@ public class Calculator extends JFrame {
 		//p_cal 레이아웃  c
 		p_cal.setLayout(new GridLayout(2,1));
 		p_cal.setPreferredSize(new Dimension(290,120)); // 레이아웃 크기 설정
-		JLabel process = new JLabel("ㅇㅇㅇ",JLabel.RIGHT);		//계산식 출력 
-		JLabel result = new JLabel("0",JLabel.RIGHT);			//결과값 출력 
+		JLabel process = new JLabel("계산식 출력란",JLabel.RIGHT);		//계산식 출력 
+		JLabel result = new JLabel("결과값 출력란",JLabel.RIGHT);			//결과값 출력 
 		p_cal.add(process);
 		p_cal.add(result);
 		
@@ -85,7 +88,7 @@ public class Calculator extends JFrame {
 		JButton b_space = new JButton("←");
 		p_cont.add(b_space);
 		
-		//p_cont 3번줄
+		//p_cont 2번줄
 		JButton seven = new JButton("7");
 		p_cont.add(seven);
 		JButton eight = new JButton("8");
@@ -95,7 +98,7 @@ public class Calculator extends JFrame {
 		JButton point = new JButton(".");
 		p_cont.add(point);
 		
-		//p_cont 4번줄
+		//p_cont 3번줄
 		JButton four = new JButton("4");
 		p_cont.add(four);
 		JButton five = new JButton("5");
@@ -105,7 +108,7 @@ public class Calculator extends JFrame {
 		JButton minus = new JButton("-");
 		p_cont.add(minus);
 		
-		//p_cont 5번줄
+		//p_cont 4번줄
 		JButton one = new JButton("1");
 		p_cont.add(one);
 		JButton two = new JButton("2");
@@ -115,7 +118,7 @@ public class Calculator extends JFrame {
 		JButton plus = new JButton("+");
 		p_cont.add(plus);
 				
-		//p_cont 6번줄
+		//p_cont 5번줄
 		JButton div = new JButton("%");
 		p_cont.add(div);
 		JButton zero = new JButton("0");
@@ -126,16 +129,31 @@ public class Calculator extends JFrame {
 		p_cont.add(equal);
 		
 		//p_cont 폰트 사이즈 설정
-		zero.setFont(bt_bold);
-		one.setFont(bt_bold);
-		two.setFont(bt_bold);
-		three.setFont(bt_bold);
-		four.setFont(bt_bold);
-		five.setFont(bt_bold);
-		six.setFont(bt_bold);
-		seven.setFont(bt_bold);
-		eight.setFont(bt_bold);
-		nine.setFont(bt_bold);
+		zero.setFont(num_bold);
+		one.setFont(num_bold);
+		two.setFont(num_bold);
+		three.setFont(num_bold);
+		four.setFont(num_bold);
+		five.setFont(num_bold);
+		six.setFont(num_bold);
+		seven.setFont(num_bold);
+		eight.setFont(num_bold);
+		nine.setFont(num_bold);
+		
+		//p_cont 폰트 사이즈 설정
+
+		rem.setFont(bt_bold);
+		ce.setFont(bt_bold);
+		c.setFont(bt_bold);
+		b_space.setFont(bt_bold);
+		div.setFont(bt_bold);
+		mul.setFont(bt_bold);
+		minus.setFont(bt_bold);
+		plus.setFont(bt_bold);
+		point.setFont(bt_bold);
+		
+		equal.setFont(bt_bold);
+		
 		
 		//p_cont 버튼 배경색 설정
 		rem.setBackground(gray);
@@ -167,11 +185,13 @@ public class Calculator extends JFrame {
 		
 		//창 보이기 설정(true : 보임 , false 안보임)
 		setVisible(true);
+		
+		
 	}
 	
 	public static void main(String[] args) {
-		// Corine의 계산기 실행
-		new Calculator("계산기");
+		// 계산기 실행
+		new Calculator("SSC.계산기");
 	}
 
 }
