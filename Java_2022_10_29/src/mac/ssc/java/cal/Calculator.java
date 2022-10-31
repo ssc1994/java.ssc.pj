@@ -56,7 +56,7 @@ public class Calculator extends JFrame {
 		this.add(p_all);
 		p_all.setLayout(new FlowLayout());
 	
-		//p_cal 레이아웃  c
+		//p_cal 레이아웃  
 		p_cal.setLayout(new GridLayout(2,1));
 		p_cal.setPreferredSize(new Dimension(290,120)); // 레이아웃 크기 설정
 		JLabel process = new JLabel("계산식 출력란",JLabel.RIGHT);		//계산식 출력 
