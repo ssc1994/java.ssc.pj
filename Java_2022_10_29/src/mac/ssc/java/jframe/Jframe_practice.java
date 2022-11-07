@@ -1,35 +1,40 @@
 package mac.ssc.java.jframe;
+import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.Label;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class Jframe_practice {
+class Jframe_practice {
+	private static String temp = "";
 	
-	public static void main(String[] args) {
-		
+	static void Jpractice() {
 		JFrame f1 = new JFrame();
-		
-		JButton b1 = new JButton("Button");
-		JLabel l1 = new JLabel("라벨");
-
-		b1.setBounds(100, 100, 100, 40);		//
-		l1.setBounds(100, 150, 100, 50);		//
 		Font font1 = new Font("맑은 고딕", Font.BOLD, 30);
-		//		l1.getFont("")
 		
-		l1.setFont(font1);
-		f1.add(b1);					//버튼을 f1에 올려준다
-		f1.add(l1);
+		JCheckBox jbox = new JCheckBox("선택");
+		JLabel label = new JLabel("");
+		jbox.setLocation(100,100);
+		jbox.setFont(font1);
+		f1.add(jbox);
+		label.setText(temp);
+		
+		//		l1.getFont("")
+		f1.add(label);
 		
 		f1.setSize(300,400);		//출력창의 사이즈
 		f1.setLocation(800, 300);
 		
-		f1.setLayout(null);
+		f1.setLayout(new FlowLayout());
 		f1.setVisible(true);
 		
+	}
 		
+	public static void main(String[] args) {
+		Jframe_practice jp = new Jframe_practice();
+		jp.Jpractice();
 	}
 	
-	
-
 }
